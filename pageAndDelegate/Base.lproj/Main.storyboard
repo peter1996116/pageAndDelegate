@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,79 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pageAndDelegate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" minimumZoomScale="0.5" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="1cN-32-yCk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lTh-IV-TfB">
+                                        <rect key="frame" x="0.0" y="0.0" width="2484" height="896"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="TYc-1N-Hw2">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="QL8-Jz-JZc">
+                                                <rect key="frame" x="414" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="u5T-7T-98w">
+                                                <rect key="frame" x="828" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="zCY-73-Knl">
+                                                <rect key="frame" x="1242" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="mdV-Ri-bCl">
+                                                <rect key="frame" x="1656" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="T9m-uG-wOJ">
+                                                <rect key="frame" x="2070" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lTh-IV-TfB" secondAttribute="bottom" id="QOu-v8-ELA"/>
+                                    <constraint firstItem="lTh-IV-TfB" firstAttribute="top" secondItem="1cN-32-yCk" secondAttribute="top" id="Rth-hL-drR"/>
+                                    <constraint firstAttribute="trailing" secondItem="lTh-IV-TfB" secondAttribute="trailing" id="bPr-sa-4JY"/>
+                                    <constraint firstItem="TYc-1N-Hw2" firstAttribute="width" secondItem="1cN-32-yCk" secondAttribute="width" id="bhS-9I-55a"/>
+                                    <constraint firstItem="lTh-IV-TfB" firstAttribute="height" secondItem="1cN-32-yCk" secondAttribute="height" id="kWI-7L-Qeh"/>
+                                    <constraint firstItem="TYc-1N-Hw2" firstAttribute="height" secondItem="1cN-32-yCk" secondAttribute="height" id="ke1-qq-tlz"/>
+                                    <constraint firstItem="lTh-IV-TfB" firstAttribute="leading" secondItem="1cN-32-yCk" secondAttribute="leading" id="nPx-A1-SjZ"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7l7-tE-8Wz">
+                                <rect key="frame" x="107" y="825" width="200" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1cN-32-yCk" secondAttribute="bottom" id="Q6u-Cj-kJW"/>
+                            <constraint firstAttribute="trailing" secondItem="1cN-32-yCk" secondAttribute="trailing" id="UjS-Qo-Hbo"/>
+                            <constraint firstItem="1cN-32-yCk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VnL-FU-2SC"/>
+                            <constraint firstItem="1cN-32-yCk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kt3-DM-zaV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pagings" destination="7l7-tE-8Wz" id="g41-wh-XOa"/>
+                        <outlet property="scroller" destination="1cN-32-yCk" id="nmI-KR-FmY"/>
+                        <outlet property="stack" destination="lTh-IV-TfB" id="3Cr-Fj-Uqn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="259" height="194"/>
+        <image name="2" width="225" height="225"/>
+        <image name="3" width="280" height="180"/>
+        <image name="4" width="251" height="201"/>
+        <image name="5" width="279" height="180"/>
+        <image name="6" width="191" height="264"/>
+    </resources>
 </document>

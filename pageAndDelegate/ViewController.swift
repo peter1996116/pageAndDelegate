@@ -8,13 +8,37 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIScrollViewDelegate  {
+   
+  
+    @IBOutlet weak var scroller: UIScrollView!
+    
+    @IBOutlet weak var stack: UIStackView!
+    
+    @IBOutlet weak var pagings: UIPageControl!
+    var pages = 0
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)  {
+        pages = Int(scroller.contentOffset.x / scroller.frame.size.width)
+        
+        pagings.currentPage = pages
+       
+      
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        scroller.delegate=self;
+        pagings.numberOfPages=Int(stack.frame.size.width/scroller.frame.size.width)
+       
     }
-
-
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView?{
+        
+        
+        return scroller.subviews.first
+        
+    }
+    
 }
 
